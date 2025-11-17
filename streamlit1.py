@@ -3,7 +3,7 @@ import os
 from openai import OpenAI
 
 
-client = OpenAI(api_key=st.secrets['OPEN_API_KEY'],
+client = OpenAI(api_key=st.secrets['OPENAI_API_KEY'],
                 base_url="https://api.deepseek.com")
 
 def judge_level(text):
@@ -45,4 +45,5 @@ if st.button('开始分析'):
                     result=tiao_zheng(user_input)
                     st.success(f'调整后的语句是：***{result}***')
             except Exception as e:
+
                 st.error('出错了，请稍后重试✌️✌️✌️😂😂😂✌️✌️✌️')
